@@ -1,0 +1,597 @@
+/* ============================================
+   CaseStudy.css - Case Study Section Styles
+   ============================================ */
+
+.case-study {
+    padding: 100px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .case-study {
+        padding: 60px 16px;
+    }
+}
+
+/* Background decoration */
+.case-study__bg-orb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -160px;
+    width: 320px;
+    height: 320px;
+    background: rgba(20, 184, 166, 0.1);
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+/* Section Header */
+.case-study__header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.case-study__label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-accent-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.case-study__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .case-study__title {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .case-study__title {
+        font-size: 48px;
+    }
+}
+
+.case-study__title-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.case-study__description {
+    font-size: 18px;
+    color: var(--color-slate-400);
+    max-width: 672px;
+    margin: 0 auto;
+}
+
+/* Content Grid */
+.case-study__content {
+    position: relative;
+    z-index: 10;
+}
+
+.case-study__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .case-study__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mockups Section */
+.case-study__mockups {
+    position: relative;
+}
+
+/* Phone Mockup */
+.case-study__phone-container {
+    position: relative;
+    z-index: 20;
+    width: 192px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .case-study__phone-container {
+        width: 224px;
+    }
+}
+
+.case-study__phone {
+    background-color: var(--color-primary-700);
+    border-radius: 48px;
+    padding: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.case-study__phone-screen {
+    background-color: var(--color-primary-900);
+    border-radius: 40px;
+    overflow: hidden;
+    aspect-ratio: 9 / 19;
+}
+
+.case-study__phone-content {
+    height: 100%;
+    background: linear-gradient(180deg, rgba(13, 148, 136, 0.2), var(--color-primary-800));
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Phone Status Bar */
+.case-study__phone-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-slate-400);
+    margin-bottom: 16px;
+}
+
+.case-study__phone-battery {
+    width: 16px;
+    height: 8px;
+    background-color: var(--color-accent-400);
+    border-radius: 2px;
+}
+
+/* Phone App Header */
+.case-study__phone-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.case-study__phone-logo {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 8px;
+    background: rgba(20, 184, 166, 0.3);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study__phone-logo svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-accent-400);
+}
+
+.case-study__phone-app-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Phone Stats */
+.case-study__phone-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.case-study__phone-stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 8px;
+    text-align: center;
+}
+
+.case-study__phone-stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-accent-400);
+}
+
+.case-study__phone-stat-label {
+    font-size: 10px;
+    color: var(--color-slate-400);
+}
+
+/* Phone Progress */
+.case-study__phone-progress {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    margin-bottom: 16px;
+}
+
+.case-study__phone-progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.case-study__phone-progress-label {
+    color: var(--color-slate-300);
+}
+
+.case-study__phone-progress-value {
+    color: var(--color-accent-400);
+}
+
+.case-study__phone-progress-bar {
+    height: 8px;
+    background-color: var(--color-primary-700);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.case-study__phone-progress-fill {
+    height: 100%;
+    width: 75%;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-full);
+}
+
+/* Phone CTA */
+.case-study__phone-cta {
+    margin-top: auto;
+}
+
+.case-study__phone-button {
+    width: 100%;
+    background-color: var(--color-accent-500);
+    border-radius: var(--radius-md);
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary-900);
+}
+
+/* Phone Glow */
+.case-study__phone-glow {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 184, 166, 0.2);
+    filter: blur(60px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Laptop Mockup */
+.case-study__laptop-container {
+    position: absolute;
+    top: 25%;
+    right: -16px;
+    z-index: 10;
+    width: 256px;
+}
+
+@media (min-width: 768px) {
+    .case-study__laptop-container {
+        right: 0;
+        width: 320px;
+    }
+}
+
+.case-study__laptop {
+    background-color: var(--color-primary-700);
+    border-radius: 8px 8px 0 0;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.case-study__laptop-screen {
+    background-color: var(--color-primary-900);
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.case-study__laptop-content {
+    height: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--color-primary-800), var(--color-primary-900));
+}
+
+/* Laptop Header */
+.case-study__laptop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.case-study__laptop-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.case-study__laptop-logo {
+    width: 24px;
+    height: 24px;
+    background: rgba(20, 184, 166, 0.3);
+    border-radius: 6px;
+}
+
+.case-study__laptop-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.case-study__laptop-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.case-study__laptop-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.case-study__laptop-dot--red {
+    background-color: #ef4444;
+}
+
+.case-study__laptop-dot--yellow {
+    background-color: #eab308;
+}
+
+.case-study__laptop-dot--green {
+    background-color: #22c55e;
+}
+
+/* Laptop Stats */
+.case-study__laptop-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.case-study__laptop-stat {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.case-study__laptop-stat-label {
+    font-size: 10px;
+    color: var(--color-slate-400);
+}
+
+.case-study__laptop-stat-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+}
+
+.case-study__laptop-stat-value--accent {
+    color: var(--color-accent-400);
+}
+
+/* Laptop Chart */
+.case-study__laptop-chart {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 8px;
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.case-study__chart-bar {
+    width: 12px;
+    background: linear-gradient(to top, var(--color-accent-600), var(--color-accent-400));
+    border-radius: 4px 4px 0 0;
+}
+
+/* Laptop Base */
+.case-study__laptop-base {
+    height: 8px;
+    background-color: var(--color-primary-600);
+    border-radius: 0 0 8px 8px;
+    margin: 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+}
+
+/* Details Section */
+.case-study__details {
+    /* Content area */
+}
+
+/* Client Badge */
+.case-study__client-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    padding: 8px 16px;
+    margin-bottom: 24px;
+}
+
+.case-study__client-avatar {
+    width: 32px;
+    height: 32px;
+    background: rgba(20, 184, 166, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study__client-avatar span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-accent-400);
+}
+
+.case-study__client-name {
+    font-size: 14px;
+    color: var(--color-slate-200);
+}
+
+.case-study__client-status {
+    font-size: 12px;
+    color: var(--color-accent-400);
+    background: rgba(20, 184, 166, 0.2);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+/* Details Heading */
+.case-study__details-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .case-study__details-title {
+        font-size: 30px;
+    }
+}
+
+.case-study__details-text {
+    font-size: 16px;
+    color: var(--color-slate-400);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/* Features Grid */
+.case-study__features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+    .case-study__features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.case-study__feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.case-study__feature-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(20, 184, 166, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.case-study__feature-icon svg {
+    width: 12px;
+    height: 12px;
+    color: var(--color-accent-400);
+}
+
+.case-study__feature-text {
+    font-size: 14px;
+    color: var(--color-slate-300);
+}
+
+/* Metrics */
+.case-study__metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    .case-study__metrics {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.case-study__metric {
+    text-align: center;
+}
+
+.case-study__metric-value {
+    font-size: 24px;
+    font-weight: 700;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (min-width: 768px) {
+    .case-study__metric-value {
+        font-size: 30px;
+    }
+}
+
+.case-study__metric-label {
+    font-size: 12px;
+    color: var(--color-slate-400);
+}
+
+/* CTA Button */
+.case-study__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gradient-accent);
+    color: var(--color-primary-900);
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    transition: all var(--transition-normal);
+}
+
+.case-study__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(20, 184, 166, 0.4);
+}
+
+.case-study__cta svg {
+    width: 20px;
+    height: 20px;
+}

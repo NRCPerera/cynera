@@ -1,0 +1,135 @@
+/* ============================================
+   TrustBar.css - Trust Signals Bar Styles
+   ============================================ */
+
+.trust-bar {
+    padding: 32px 0;
+    background-color: rgba(15, 23, 42, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.trust-bar__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.trust-bar__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+@media (min-width: 1024px) {
+    .trust-bar__content {
+        flex-direction: row;
+    }
+}
+
+/* Tech Stack */
+.trust-bar__tech {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.trust-bar__tech-label {
+    font-size: 12px;
+    color: var(--color-slate-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.trust-bar__tech-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.trust-bar__tech-item {
+    position: relative;
+    color: var(--color-slate-400);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.trust-bar__tech-item:hover {
+    color: var(--color-accent-400);
+}
+
+.trust-bar__tech-item:hover .trust-bar__tech-icon {
+    transform: scale(1.1);
+}
+
+.trust-bar__tech-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform var(--transition-normal);
+}
+
+.trust-bar__tech-name {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    white-space: nowrap;
+}
+
+.trust-bar__tech-item:hover .trust-bar__tech-name {
+    opacity: 1;
+}
+
+/* Divider */
+.trust-bar__divider {
+    display: none;
+    width: 1px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1024px) {
+    .trust-bar__divider {
+        display: block;
+    }
+}
+
+/* Badges */
+.trust-bar__badges {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.trust-bar__badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    padding: 8px 16px;
+}
+
+.trust-bar__badge-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--color-accent-400);
+}
+
+.trust-bar__badge-text {
+    font-size: 14px;
+    color: var(--color-slate-200);
+}
+
+.trust-bar__badge-status {
+    font-size: 12px;
+    color: var(--color-accent-400);
+}
