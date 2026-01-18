@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import cyneraLogo from '../assets/cynera_logo.png';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -69,9 +70,7 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className="footer__brand">
                         <div className="footer__logo">
-                            <div className="footer__logo-icon">
-                                <span>C</span>
-                            </div>
+                            <img src={cyneraLogo} alt="Cynera" className="footer__logo-img" />
                             <span className="footer__logo-text">Cynera</span>
                         </div>
                         <p className="footer__tagline">

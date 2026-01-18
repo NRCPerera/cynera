@@ -39,25 +39,16 @@
   gap: 8px;
 }
 
-.nav__logo-icon {
+.nav__logo-img {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  background: var(--gradient-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: contain;
   transition: transform var(--transition-normal);
 }
 
-.nav__logo:hover .nav__logo-icon {
+.nav__logo:hover .nav__logo-img {
   transform: scale(1.05);
-}
-
-.nav__logo-icon span {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--color-primary-900);
 }
 
 .nav__logo-text {
